@@ -10,7 +10,7 @@ body {
 
 html {
 	scroll-behavior: smooth;
-	min-width: 1066px;
+	min-width: 992px;
 }
 
 html, body {
