@@ -14,6 +14,10 @@
 		<div class="main-content">
 			<div class="main-menu">
 				<img src="images/logo.png">
+				<div class="navigation-bar" id="navigation-bar">
+				<div class="burger" onclick="toggleMobileMenu()">
+					    <div class="burger__bar"></div>
+					  </div>
 				<div class="main-links">
 					<a href="">Home</a>
 					<a href="">About Course</a>
@@ -22,6 +26,7 @@
 					<a href="">Course Schedule</a>
 					<a href="">Blog</a> 
 					<a href="">Contact Us</a>
+				</div>
 				</div>
 			</div>
 			<div class="main-info">
@@ -147,9 +152,11 @@
 
 
 					<div class="course-2-content">
-						<div class="course-2-text-head">		
-						<h2 class="text-black">the right course</h2>
+						<div class="course-2-text-head">	
+							<h2 class="text-black">the right course</h2>
 						</div>
+
+						<h2 class="course-2-head-mob">Choosing the right course <span class="text-red-mob">for you</span></h2>
 
 						<p>At RMIT Online, you can choose from a range of courses designed for the future of work. In the area of business analysis and analytics, we have
 						a number of options depending on your objectives. Our Business Analyst course will provide you with the behaviourial, technical, and Agile skills
@@ -406,9 +413,9 @@
 							questions or concerns you may have. </p>
 						</div>
 					</figure>
-					<div class="response-border">
+					<!-- <div class="response-border">
 						<span class="support-response-border"></span>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -472,6 +479,14 @@
 			</div>
 		</div>
 	</section>
+
+<script type="text/javascript">
+    const nav = document.getElementById('navigation-bar'); 
+
+    function toggleMobileMenu() {
+      nav.classList.toggle('open');
+    }
+  </script>
 
 </body>
 

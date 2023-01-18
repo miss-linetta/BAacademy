@@ -15,6 +15,9 @@
 .main-content {
 	width: 85%;
 	padding-top: 24px;
+	display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 
@@ -22,9 +25,11 @@
 
 .main-menu {
 	width: 100%;
-	display: inline-flex;
+	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .main-links {
@@ -54,10 +59,12 @@
 
 .main-info-text {
 	width: 60%;
+	display: flex;
+	flex-direction: column;
 }
 
 .main-info-text h1 {
-	margin: 100px 0 30px 0;
+	margin: 30px 0;
 	width: 100%;
 }
 
@@ -73,7 +80,7 @@
 /* Buttons */
 
 .main-info-buttons {
-	display: inline-flex;
+	display: flex;
 	gap: 10px;
 }
 
@@ -112,9 +119,6 @@
 	width: 40%;
 }
 
-.main-info-img img {
-
-}
 
 .img-small-main {
 	position: absolute;
@@ -132,7 +136,6 @@
 .img-big-main {
 	width: auto;
 	height: min-content;
-	padding-top: 50px;
 }
 
 
@@ -159,25 +162,22 @@
 .reasons-aside {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 .reasons-text {
-	width: 100%;
+	width: 70%;
 	padding-right: 4%;
 }
 
 .reasons-text h2 {
 	margin: 0 0 40px 0;
+	width: 85%;
 }
 
 #reasons-summary-1, #reasons-summary-2 {
 	margin-top: 96px;
 }
-
-/* #reasons-summary-2 {
-	width: 408px;
-} */
 
 
 /* Course section */
@@ -204,6 +204,10 @@
 /* 	background-color: #EEEEEE; */
 }
 
+.course-1-text h2 {
+	margin-top: 0;
+}
+
 .course-1-text {
 	width: 45%;
 	padding-right: 7.5%;
@@ -213,8 +217,7 @@
 	width: 55%;
 	max-height: 566px;
 	background-image: url('../images/img-course-1.png');
-	background-repeat: no-repeat;
-
+	background-size: cover;
 }
 
 .details-content {
@@ -271,10 +274,15 @@
 
 .course-2-img {
 	background-image: url("../images/img-course-2.png");
+	background-size: cover;
 	width: 60%;
 	height: 526px;
 	position: relative;
 
+}
+
+.course-2-head-mob {
+	display: none;
 }
 
 .course-2-text-head {
@@ -443,10 +451,10 @@
 }
 
 .why-body-img-1, .why-body-img-2, .why-body-img-3, .why-body-img-4, .why-body-img-5 {
-	background-size: 55px;
 	background-repeat: no-repeat;
+	background-size: cover;
 	width: 55px;
-	height:  55px;
+	height: 55px;
 }
 
 
@@ -567,13 +575,14 @@
     justify-content: center;
     align-content: center;
     align-items: center;
+    gap: 50px;
 
     color: #FFFFFF;
 }
 
 .section-adInfo h2 {
 	width: 747px;
-	margin: 0 0 50px 0;
+	margin: 0;
 	text-align: center;
 }
 
@@ -601,6 +610,7 @@
 
 .support-head h2 {
 	width: 60%;
+	padding-right: 3%;
 }
 
 .support-head-border {
@@ -664,7 +674,7 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-end;
-	gap: 84px;
+	gap: 5.25rem;
 }
 
 .response-obj {
@@ -681,10 +691,7 @@
 
 /* responses */
 
-/* .support-response .response-2 .response-obj {
-	width: 70%;
-}
- */
+
 .response-1 {
 	width: 50%;
 	height: 100%;
@@ -738,8 +745,9 @@
 .response-2 {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	width: 40%;
-	height: 100%;
+	max-height: 420px;
 }
 
 .response-2 .response-obj {
@@ -769,6 +777,9 @@
 
 .online-content {
 	width: 85%;
+
+	display: flex;
+    flex-direction: column;
 }
 
 .online-head {
@@ -799,6 +810,7 @@
 	width: 100%;
 	height: 300px;
 	background-image: url('../images/img-online.png');
+	background-size: cover;
 }
 
 .online-info {
@@ -833,11 +845,18 @@
 /* Section enrolment */
 
 
-.enrolment-content {
+.section-enrolment {
+	background-image: url('../images/img-enrolment.png');
+	background-position-x: center;
 	width: 100%;
 	height: 586px;
-	background-image: url('../images/img-enrolment.png');
 
+	display: flex;
+	justify-content: center;
+}
+
+.enrolment-content {
+	width: 100%;
 	display: flex;
 	justify-content: center;
     align-items: center;
@@ -850,13 +869,23 @@
 	margin: 0 0 24px 0;
 }
 
+.enrolment-text {
+	padding-left: 15%;
+	width: 40%;
+
+	display: flex;
+	flex-direction: column;
+}
+
 .enrolment-photo {
 	height: 100%;
-	width: 400px;
+	width: 40%;
+	padding-right: 10%;
 }
 
 .enrolment-photo-small {
 	background-image: url('../images/img-enrolment-small.png');
+	background-size: cover;
 	width: 113px;
 	height: 113px;
 
@@ -867,6 +896,7 @@
 
 .enrolment-photo-big {
 	background-image: url('../images/img-enrolment-big.png');
+	background-size: cover;
 	width: 218px;
 	height: 218px;
 
@@ -878,15 +908,6 @@
 .enrolment-photo {
 	position: relative;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* Footer */
@@ -910,13 +931,539 @@ footer h3 {
 
 
 
+.burger {
+	display: none;
+}
 
+.burger__bar {
+	width: 50px;
+ 	height: 6px;
+	margin: 10px auto;
+	background-color: white;
+}
 
-@media only screen and (min-width: 992px) {
-	
+.burger {
+	display: none;
+}
+
+.burger__bar {
+	width: 45px;
+  	height: 5px;
+  	border-radius: 5px;
+	margin: 5px auto;
+	background-color: white;
+}
+
+.burger__bar::before, 
+.burger__bar::after {
+	content: '';
+	position: absolute;
+	width: 45px;
+	height: 5px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+	transition: all .5s ease-in-out;
+}
+
+.burger__bar::before {
+	transform: translateY(-16px);
+}
+
+.burger__bar::after {
+	transform: translateY(16px);
+}
+
+.navigation_bar.open .burger__bar::before {
+	transform: rotate(45deg) translate(35px, -35px);
+}
+
+.navigation_bar.open .burger__bar::after {
+	transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.navigation_bar.open .burger__bar {
+	transform: translateX(-50px);
+	background:  transparent;
+	box-shadow: none;
 }
 
 
+
+@media only screen and (max-width: 1000px) {
+
+	/*Burger menu*/
+
+	.burger {
+     	display: inline-block;
+  	}
+
+  	.navigation-bar .main-linls {
+   		display: none;
+   		position: absolute;
+  	} 
+
+ 	.navigation-bar.open .main-links {
+	  	display: flex;
+	  	flex-direction: column;
+	  	position: fixed;
+		transform: translateX(-270px) translateY(43px);
+	  	width: 100%;
+	  	padding: 0;
+
+	  	background-color: rgba(43, 43, 43, .9);
+  	}
+
+  	.navigation-bar {
+	  	flex-direction: column;
+	    align-items: flex-start;
+	    height: fit-content;
+	}
+
+  	.main-links {
+	  	width:  100%;
+	  	position: fixed;
+	  	display: flex;
+	  	flex-direction: column;
+	  	align-items: center;
+	}  
+
+	.main-info, .reasons-content,
+	.course-1, .course-2, .course-3, .course-3-content,
+	.why-head, .why-body, .details-text,
+    .what-head, .what-content-text, 
+  	.support-head, .support-info, .support-response,
+  	.online-head, .online-info, 
+  	.enrolment-content {
+	  	flex-direction: column;
+	}
+
+	.main-content,
+	.section-main h1, .main-info-img,
+	.reasons-text,
+	.details-text-obj-col-1, .details-text-obj-col-2,
+	.details-content .details-text p,
+	.course-1, .course-1-details,
+	.course-2-text-head .text-black h2, .course-2-text,
+	.why-head p, .why-body-col-1, .why-body-col-2,
+	.what-content h2, .what-modules, .what-info,
+	.companies-obj p, 
+	.response-2 .response-obj  {
+		width: 100%;		
+	}
+
+	.main-menu, .main-info-text,
+	.reasons-content,
+	.course-1-text, .course-2-content,
+	.details-content,
+	.section-adInfo h2, .support-content, 
+	.online-info, .online-head h2, .online-head p,
+	.enrolment-text p  {
+		width: 85%;
+	}
+
+
+	.section-main {
+		background-position-x: center;
+	}
+
+	.main-content {
+		align-items: center;
+	}
+
+	.main-links {
+		display: none;
+	}
+
+	.main-info {
+    	align-items: center;
+	}
+
+	.main-info-text {
+		align-items: center;
+		margin-bottom: 80px;
+	}
+
+	.main-info-text h1 {
+		font-size: 64px;
+	}
+
+	.main-info-text button {
+		width: 150px;
+	}
+
+	.main-info-buttons {
+		width: 100%;
+		justify-content: space-between;
+	}
+	
+  	.main-info-text p {
+  		width: auto;
+  	}
+
+  	.img-medium-main {
+  		right: 0;
+  		top: 190px;
+  		width: 202px;
+  	}
+
+  	.img-small-main {
+  		top: 130px;
+  		width: 57px;
+  	}
+
+  	.img-big-main {
+  		width: 250px;
+    	height: auto;
+  	}
+
+
+	#reasons-summary-2 {
+		margin: 40px 0 0 0;
+	}
+  	
+	.section-reasons {
+		justify-content: center;
+	}
+
+  	.reasons-text {
+  		padding: 0;
+  	}
+
+  	.course-content {
+  		padding: 0;
+  	}
+
+  	.course-1 {
+  		margin: 0;
+  		align-items: center
+  	}
+
+  	.course-1-details {
+  		display: flex;
+  		justify-content: center;
+  		max-height: none;
+  	}
+
+  	.course-1-text {
+  		padding: 0;
+  		margin-bottom: 15%;
+  	}
+
+  	.details-content {
+  		padding: 48px 0;
+  	}
+
+  	.details-text {
+  		gap: 0;
+  	}
+
+  	.details-content .details-text p {
+  		margin-bottom: 16px;
+  	}
+
+  	.course-2-text-head .text-black {
+  		display: none;
+  	}
+
+  	.course-2-text-head {
+  		height: 0;
+  	}
+
+  	.course-2-head-mob {
+  		display: block;
+  		margin: 128px 0 40px 0;
+  	}
+
+  	.course-2-img {
+  		display: none;
+  	}
+
+  	.course-2-text {
+  		padding: 0;
+  		align-items: center;
+  	}
+
+  	.course-3-content {
+  		width: 100%;
+  		gap: 8px;
+  	}
+
+  	.course-3-obj {
+  		background-color: #2B2B2B;
+  		color: #FFFFFF;
+  		padding: 32px 24px 40px 24px;
+  	}
+
+  	.section-why {
+  		padding: 128px 0 64px 0;
+  	}
+
+  	.why-head {
+  		gap: 40px;
+  	}
+
+  	.why-head h2 {
+  		margin: 0;
+  	}
+
+  	.why-body {
+  		gap: 32px;
+  	}
+
+  	.why-body-img-1, .why-body-img-2, .why-body-img-3, .why-body-img-4, .why-body-img-5 {
+  		width: 60px;
+  	}
+
+  	.what-content {
+  		width: 100%;
+  		padding: 128px 0;
+  	}
+
+  	.what-head {
+  		padding: 0 5%;
+  	}
+
+
+  	.what-head .border {
+  		display: none;
+  	}
+
+  	.what-list-obj {
+  		width: auto;
+  	}
+
+  	.what-info-obj {
+  		width: auto;
+  		padding: 32px 24px 32px 32px;
+  	}
+
+  	.info-ms {
+  		width:  auto;
+  		padding: 24px 24px 24px 32px;
+  	}
+
+  	.section-adInfo {
+  		gap: 40px;
+  		padding: 150px 0;
+  	}
+
+  	.section-support {
+  		padding: 128px 0;
+  		align-items: center;
+  	}
+
+  	.support-head h2 {
+  		width: auto;
+  		padding-right: 5%;
+  		margin: 0;
+
+  	}
+
+  	.support-head-border {
+  		display: none;
+  	}
+
+  	.support-info p:first-child {
+  		width: 100%;
+  		margin: 40px 0;
+  	}
+
+  	.support-companies {
+  		width: 100%;
+  		padding: 0;
+  	}
+
+  	.companies-obj {
+  		flex-direction: column;
+  		gap: 16px;
+  	}
+
+  	.support-response {
+  		align-items: center;
+  		gap: 24px;
+  	}
+
+  	.response-1, .response-2 {
+  		width: 90%;
+  	}
+
+  	.response-obj-content {
+    	padding: 32px 32px 32px 72px;
+    }
+
+    .response-img {
+	    width: 64px;
+	    height: 64px;
+	    left: -14px;
+	    background-size: cover;
+	}
+
+	.response-body {
+		font-size: 0.875rem;
+	}
+
+	.online-content {
+		width: 100%;
+		align-items: center;
+	}
+
+	.online-head h2 {
+		line-height: 115%;
+		letter-spacing: -0.01em;
+		margin-bottom: 40px;
+	}
+
+	.online-img {
+		margin: 16px 0 56px 0;
+		height: 175px;
+		background-position-x: right;
+	}
+
+  	.online-info .online-obj {
+    	width: auto;
+	}
+
+  	.enrolment-content {
+  		background-position-x: center;
+  	}
+
+  	.enrolment-photo .enrolment-photo-big {
+  		left: 152px;
+    	top: 20px;
+  	}
+
+
+  	.enrolment-text {
+  		width: 85%;
+  		padding: 0;
+  		align-items: flex-start;
+  	}
+
+  	.enrolment-text h2 {
+  		font-size: 2.5rem;
+  		width: 85%;
+  	}
+
+  	.enrolment-text button {
+  		margin-right: 52.5%;
+  	}
+
+  	.enrolment-photo {
+  		width: 100%;
+  		padding: 0;
+  	}
+
+  	.enrolment-photo-small {
+  		left: 27px;
+    	top: 170px;
+  	}
+
+	footer h3:nth-child(2n+1) {
+		display: none;
+	}
+
+}
+
+
+@media only screen and (max-width: 370px) {
+	.enrolment-photo .enrolment-photo-big {
+		width: 150px;
+		height: 150px;
+		left: 120px;
+	}
+
+	.enrolment-photo .enrolment-photo-small {
+		width: 90px;
+		height: 90px;
+		left: 41px;
+   		top: 186px;
+	}
+
+}
+
+
+@media only screen and (min-width: 410px) {
+	.main-info-img .img-big-main {
+    	width: 320px;
+	}
+
+	.main-info-img .img-medium-main {
+	    top: 190px;
+	    width: 315px;
+	}
+
+	.main-info-img .img-small-main {
+		top: 71px;
+    	width: 90px;
+    }
+
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+
+	.main-info-img .img-small-main {
+		width: 110px;
+		top: 0;
+		left: 8px;
+	}
+
+	.main-info-img .img-big-main {
+		width: 380px;
+	}
+
+	.main-info-img .img-medium-main {
+		top: 115px;
+		width: 445px;
+	}
+
+	.course-1-details .details-content .details-text {
+		flex-direction: row;
+		gap: 40px;
+	}
+
+	.course-3 {
+		align-items: center;
+	}
+
+	.course-3-content {
+		width: 85%;
+	}
+
+	.course-3-obj {
+		border-radius: 2%;
+	}
+
+	.support-companies {
+		flex-direction: row;
+	}
+
+	.section-online .online-content .online-head {
+		flex-direction: row;
+		width: 85%;
+		margin-bottom: 30px;
+		gap: 20px;
+	}
+
+	.online-head h2 {
+		margin-bottom: 0;
+	}
+
+	.enrolment-content {
+		flex-direction: row;
+		width: 85%;
+	}
+
+	.enrolment-photo .enrolment-photo-big {
+		top: 30%;
+	}
+
+	.enrolment-photo .enrolment-photo-small {
+		top: 60%;
+	}
+
+}
 
 
 
